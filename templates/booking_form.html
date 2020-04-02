@@ -1,0 +1,16 @@
+{% include 'layouts/default/page.html' %}
+<!DOCTYPE html>
+{% load i18n %}
+<body>
+{% block title %}{% trans "Create sbooking" %}{% endblock %}
+
+{% block main %}
+    <h1>{% trans "Create bookings" %}</h1>
+    <form method="post" action=".">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="{% trans "Save" %}" />
+    </form>
+{% endblock %}
+</body>
+</html>

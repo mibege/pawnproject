@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load bootstrap4 %}
+{% load i18n %}
+
+
+
+<body>
+
+{% block title %}{% trans "My bookings" %}{% endblock %}
+
+{% block main %}
+    <h1>{% trans "My bookings" %}</h1>
+    <ul>
+        {% for booking in object_list %}
+             <li>From {{ booking.date_from }} until  {{ booking.date_until }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+</body>
+
+</html>
