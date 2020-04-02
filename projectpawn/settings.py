@@ -26,8 +26,8 @@ ENABLE_USER_ACTIVATION = True
 DISABLE_USERNAME = False
 LOGIN_VIA_EMAIL = False
 LOGIN_REDIRECT_URL = 'index'
-LOGIN_REDIRECT = 'accounts:post_user_view'
-LOGIN_URL = 'accounts:log_in'
+LOGIN_REDIRECT = 'post_user_view'
+LOGIN_URL = 'log_in'
 USE_REMEMBER_ME = False
 SIGN_UP_FIELDS = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
 # SECURITY WARNING: don't run with debug turned on in production!
